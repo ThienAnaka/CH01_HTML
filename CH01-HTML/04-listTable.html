@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4: list và table</title>
+    <style>
+        /* Trong demo-table, chỉ td mới bị  */
+        .demo-table, 
+        .demo-table td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <!-- list: danh sách liệt kê: 3 dạng: ul ol dl -->
+    <!-- ol: ordered list: danh sách có thứ tự -->
+    <ol type="I" start="0">
+        <li>Cà phê sữa</li>
+        <li>Cà phê đá</li>
+        <li>Cà phê muối</li>
+    </ol>
+
+    <!-- ul: unordered list: danh sách ko có thứ tự -->
+    <ul style="list-style-type: disc;">
+        <li>Cà phê sữa</li>
+        <li>Cà phê đá</li>
+        <li>Cà phê muối</li>
+    </ul>
+
+    <!-- 1 lỗi sai của tất cả mọi người lúc mới học -->
+     <!-- Xài p sẽ vi phạm 2 quy tắc
+            1.Ko phân cấp
+            2.vì trong ul chỉ có li (listItem) 
+            Tính tương thích: Trình duyệt có thể hiển thị trang web 
+            của bạn một cách nhất quán và không gây ra lỗi về hiển thị.
+     -->
+    <!-- ***Đc phép lồng ul trong li -->
+
+    
+     <ul>
+        
+        <li>
+            Cà phê
+            <ul>
+                <li>Cà phê sữa</li>
+                <li>Cà phê đá</li>
+                <li>Cà phê muối</li>
+            </ul>
+        </li>
+     </ul>
+
+     <ul>
+        <li>
+            Rượu
+            <ul>
+                <li>Gin</li>
+                <li>Rum</li>
+                <li>Henessy</li>
+            </ul>
+        </li>
+     </ul>
+
+     <!-- Table -->
+    <!-- tr(tableRound): hàng | td(TableData): ô 
+     có 3 hàng mỗi hàng 3 ô -->
+    <table class="demo-table">
+        <tr>
+            <td colspan="2">1</td>
+            <!-- <td>2</td> -->
+            <td rowspan="2">3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <!-- <td>6</td> -->
+        </tr>
+        <tr>
+            <td colspan="3">7</td>
+            <!-- <td>8</td> -->
+            <!-- <td>9</td> -->
+        </tr>
+    </table>
+
+    <!-- table>tr*9>td*5 Công thức-->
+
+
+    
+</body>
+</html>

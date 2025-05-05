@@ -1,0 +1,45 @@
+.demo-status{
+    color: teal;
+}
+
+.demo-status:active{
+    color: blue !important;
+}
+/* !important: tk nào gán important thì sẽ đc
+    ưu tiên trc
+*/
+.demo-status:hover{
+    color: purple;
+}
+
+/* Trong CSS: tk càng ở dưới mạnh hơn tk ở trên */
+/* demo-button */
+.demo-button{
+    display: inline-block;
+    border: 1px solid black;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 10px 15px;
+    margin: 10px;
+    transition: 0.3s;
+    /* transition: hiệu chỉnh thời gian chậm */
+    /* thin(400): độ dày font mặc định
+        Trên thực tế, chỉ xài đc 2 thông số 400(thin),700(bold)
+        Muốn xài những thông số kia phải kiếm thư viện tải về 
+    */
+}
+/* 
+    modelbox: mô hình hộp: gồm 4 cái
+    border: đường viền 
+    content: nội dung 
+    padding: khoảng cách từ viền đến chữ(content)| đc ưu tiên hơn
+    margin: khoảng cách từ viền so với các vật thể khác
+    */
+
+.demo-button:hover{
+    color: white;
+    background-color: black;
+}

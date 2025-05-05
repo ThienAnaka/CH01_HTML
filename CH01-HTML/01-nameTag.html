@@ -1,0 +1,253 @@
+<!-- comment: xài ctrl + '/'  -->
+
+<!-- 
+HTML:hyper text markup language
+ngôn ngữ đánh dấu siêu văn bản
+đây ko phải là ngôn ngữ lập trình 
+
+-->
+
+<!-- document: muốn hiển thị tài liệu như 1 trang web thì cần 
+ chạy trên nền tảng webpage(web browser)-->
+
+<!-- 
+Trong html, các thành phần đều là tag | thẻ 
+Cấu trúc của 1 tag là:
+<tagName attribute> content: nội dung </tagName>
+-->
+<!DOCTYPE html>
+<html lang="vi" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--2 dòng trên bổ nghĩa có cũn đc, ko cũn đc  -->
+    <title>Bài số 1: name tag</title>
+  </head>
+  <body>
+    <!-- bộ heading 
+            * trong html ngta thường đặt tên theo các tag | thẻ dựa theo
+            chức năng của nó 
+        -->
+    <h1>Anh điệp đẹp trai quá</h1>
+    <h2>I.phân tích vẻ đẹp trai của anh điệp</h2>
+    <h3>I.1 đôi mắt của đàn ông nhiều tiền</h3>
+    <h3>I.2 nụ cười tri thức trong bóng tối thời đại</h3>
+    <!-- có tất cả có 6 thẻ h
+            số càng lớn, chữ càng nhỏ
+            thẻ h thường dùng để làm title, đầu mục 
+            ***CÁC THẺ HEADING ĐỀU CÓ DISPLAY LÀ BLOCK***
+            block: là thẻ mà chiếm trọn 1 hàng, ko có thẻ nào cùng hàng vs
+            nó đc
+            inline-block: thẻ mà có khối chỉ bao trọn content mà thôi(có viền)
+                Có thể thiết lập chiều rộng (width) và chiều cao (height).
+            -->
+    <h5 style="display: inline-block">Người đẹp trai nhất</h5>
+    <h6 style="display: inline-block">Là anh Điệp</h6>
+
+    <!-- p:paragrahps: đoạn văn : block
+            br: breakline : xuống hàng
+            -->
+    <p>
+      Tôi tên là &#8194;&#8194;&#8194;&#8194; điệp, nhà tôi ở quận 9 <br />
+      3 đời nhà tôi làm gỗ, đến đời tôi làm giang hồ
+    </p>
+
+    <!-- pre: preformated 
+                ko nên xài vì bị hở sườn web 
+            -->
+    <!-- <pre>
+            Tôi tên là    điệp, nhà tôi ở quận 9 
+            3 đời nhà tôi làm gỗ, đến đời tôi làm giang hồ
+            </pre> -->
+
+    <!-- 
+                Multipage(ko có react): hiệu năng tốt hơn nhưng load khá lâu
+                    và có khả năng lag
+                singlepage( có react): trải nghiệm tốt hơn nhưng hiệu năng
+                    kém hơn
+            -->
+    <!-- Hầu hết các thẻ mà mik dùng đều có thuộc tính style 
+                text-align: căn lề cho text của thẻ 
+            -->
+
+    <p style="text-align: center">demo text-align với block</p>
+
+    <!-- ko nên làm như vầy vì block sẽ ko di chuyển đc -->
+    <p style="display: inline-block; text-align: center">
+      demo text-align với inline-block
+    </p>
+
+    <!-- tag formatting: bộ tượng hình  -->
+    <p>
+      <em>xin chào</em> các bạn, <del>tao</del> <strong>tôi</strong> là
+      <mark>điệp đẹp trai</mark>
+    </p>
+
+    <p>H<sub>2</sub>0 nước</p>
+    <!-- sub: đưa chữ xuống
+                VD: H20 
+            -->
+
+    <p>ax<sup>2</sup> + bx + c= 0</p>
+    <!-- sup: đưa chữ lên
+                VD: đưa số thành số mũ  
+            -->
+
+    <!-- i: itaic: nghiêng | em: emphasized: Nhấn mạnh 
+                b: bold: đậm | strong:  mạnh mẽ, quan trọng 
+                mark: in đậm chữ 
+                inline: thẻ chỉ có content, ko có hộp(ko có viền- block)
+                    **Không thể thiết lập chiều rộng (width) và chiều cao (height).
+                chỉ có 2 loại display(block và inline)
+             -->
+    <!-- pseudo tag: tag giả | thẻ mà ko có chức năng
+                span: display inline(ko làm xuống hàng)
+                div: display block 
+            -->
+
+    <p>
+      <span style="font-size: 60px; text-decoration: line-through; color: red"
+        >x</span
+      >in chào bạn
+    </p>
+
+    <!-- demo div -->
+    <div style="color: red">
+      <p>người giàu sống tình cảm</p>
+      <p>ai cũng có thể trở nên giàu có</p>
+      <p>nếu như ba mẹ họ giàu sẵn</p>
+    </div>
+
+    <!-- Bài tập -->
+    <div style="color: red; text-align: left">
+      <p>
+        Lòng ta trống lắm, lòng ta sụp <br />
+        Như túp nhà không bốn vách xiêu; <br />
+        Em chẳng cứu giùm, em bỏ mặc <br />
+        Mưa đưa ta đến bến Đìu hiu. <br />
+      </p>
+    </div>
+
+    <div style="color: blue; text-align: right">
+      <p>
+        Em ở bên mình; ta ngó say, <br />
+        Song le bên ấy với bên này <br />
+        Cũng xa như những bờ xa cách, <br />
+        Không có thuyền qua, không cánh bay. <br />
+      </p>
+    </div>
+
+    <div style="color: red; text-align: left">
+      <p>
+        Ta thấy em xinh, khẽ lắc đầu. <br />
+        Bởi vì ta có được em đâu! <br />
+        Tay kia sẽ ấp nhiều tay khác, <br />
+        Môi ấy vì ai sẽ đượm mầu. <br />
+      </p>
+    </div>
+
+    <!-- a:hyper link references - link: inline  -->
+    <p>
+      <a
+        href="https://www.google.com.vn/?hl=vi"
+        target="_blank"
+        style="color: black; text-decoration: none; cursor: default"
+      >
+        dẫn tới tri thức
+      </a>
+    </p>
+
+    <!-- a:bookmark -->
+    <p><a href="#khobau">Đường đến kho báu</a></p>
+    <p>
+      Bài văn xúc động người đọc bởi cảm xúc chân thành từ chính tình cảm của
+      con dành cho người cha tần tảo của mình. Cô giáo đã chấm cho Hậu 9,5 điểm
+      với lời nhận xét: “Em là một người con ngoan, bài viết của em đã làm cho
+      cô rất xúc động. Điều đáng quý nhất của em là tình cảm chân thực và em có
+      một trái tim nhân hậu. Em đã cho cô một bài học làm người. Mong rằng đây
+      không chỉ là trang văn mà còn là sự hành xử của em trong cuộc đời”. Được
+      biết, thầy Lê Trần Bân, hiệu phó trường THPT Huỳnh Thúc Kháng đã đọc bài
+      văn trong lễ chào cờ đầu tuần, trước toàn trường. Trích đoạn bài văn của
+      em Nguyễn Thị Hậu có những dòng xúc động như sau: “Bố tôi không may mắn
+      như những người đàn ông khác. Trong suốt cuộc đời bố có lẽ không bao giờ
+      được sống trong sự sung sướng, vui vẻ. Bốn mươi tuổi khi chưa đi được nửa
+      chặng đời người, bố đã phải sống chung với bao nhiêu bệnh tật:
+      <span id="khobau">kho báu nè</span>Đầu tiên đó chỉ là những cơn đau dạ
+      dày, rồi tiếp đến lại xuất hiện thêm nhiều biến chứng. Trước đây, khi còn
+      khỏe mạnh, bao giờ bố cũng rất phong độ. Thế nhưng bây giờ, vẻ đẹp ấy
+      dường như đã dần đổi thay: Thay vì những cánh tay cuồn cuộn bắp, giờ đây
+      chỉ còn là một dáng người gầy gầy, teo teo. Đôi mắt sâu dưới hàng lông mày
+      rậm, hai gò má cao cao lại dần nổi lên trên khuôn mặt sạm đen vì sương
+      gió. Tuy vậy, bệnh tật không thể làm mất đi tính cách bên trong của bố, bố
+      luôn là một người đầy nghị lực, giàu tự tin và hết lòng thương yêu gia
+      đình. Gia đình tôi không khá giả, mọi chi tiêu trong gia đình đều phụ
+      thuộc vào đồng tiền bố mẹ kiếm được hàng ngày”. Bài văn viết về mẹ Cũng
+      giống như Nguyễn Thị Hậu, học sinh Nguyễn Thị Kiều Vân viết về người thân
+      trong gia đình đó là mẹ gây xúc động. Bài văn được viết tháng 4/2013 trong
+      tiết kiểm tra môn Ngữ văn khi Kiều Vân học lớp 8. Bài văn được chấm điểm
+      tối đa 10, kèm theo đó là dòng nhận xét “Bài viết quá xúc động, cảm ơn
+      con”. xuất hiện thêm nhiều biến chứng. Trước đây, khi còn khỏe mạnh, bao
+      giờ bố cũng rất phong độ. Thế nhưng bây giờ, vẻ đẹp ấy dường như đã dần
+      đổi thay: Thay vì những cánh tay cuồn cuộn bắp, giờ đây chỉ còn là một
+      dáng người gầy gầy, teo teo. Đôi mắt sâu dưới hàng lông mày rậm, hai gò má
+      cao cao lại dần nổi lên trên khuôn mặt sạm đen vì sương gió. Tuy vậy, bệnh
+      tật không thể làm mất đi tính cách bên trong của bố, bố luôn là một người
+      đầy nghị lực, giàu tự tin và hết lòng thương yêu gia đình. Gia đình tôi
+      không khá giả, mọi chi tiêu trong gia đình đều phụ thuộc vào đồng tiền bố
+      mẹ kiếm được hàng ngày”. Bài văn viết về mẹ Cũng giống như Nguyễn Thị Hậu,
+      học sinh Nguyễn Thị Kiều Vân viết về người thân trong gia đình đó là mẹ
+      gây xúc động. Bài văn được viết tháng 4/2013 trong tiết kiểm tra môn Ngữ
+      văn khi Kiều Vân học lớp 8. Bài văn được chấm điểm tối đa 10, kèm theo đó
+      là dòng nhận xét “Bài viết quá x xuất hiện thêm nhiều biến chứng. Trước
+      đây, khi còn khỏe mạnh, bao giờ bố cũng rất phong độ. Thế nhưng bây giờ,
+      vẻ đẹp ấy dường như đã dần đổi thay: Thay vì những cánh tay cuồn cuộn bắp,
+      giờ đây chỉ còn là một dáng người gầy gầy, teo teo. Đôi mắt sâu dưới hàng
+      lông mày rậm, hai gò má cao cao lại dần nổi lên trên khuôn mặt sạm đen vì
+      sương gió. Tuy vậy, bệnh tật không thể làm mất đi tính cách bên trong của
+      bố, bố luôn là một người đầy nghị lực, giàu tự tin và hết lòng thương yêu
+      gia đình. Gia đình tôi không khá giả, mọi chi tiêu trong gia đình đều phụ
+      thuộc vào đồng tiền bố mẹ kiếm được hàng ngày”. Bài văn viết về mẹ Cũng
+      giống như Nguyễn Thị Hậu, học sinh Nguyễn Thị Kiều Vân viết về người thân
+      trong gia đình đó là mẹ gây xúc động. Bài văn được viết tháng 4/2013 trong
+      tiết kiểm tra môn Ngữ văn khi Kiều Vân học lớp 8. Bài văn được chấm điểm
+      tối đa 10, kèm theo đó là dòng nhận xét “Bài viết quá x xuất hiện thêm
+      nhiều biến chứng. Trước đây, khi còn khỏe mạnh, bao giờ bố cũng rất phong
+      độ. Thế nhưng bây giờ, vẻ đẹp ấy dường như đã dần đổi thay: Thay vì những
+      cánh tay cuồn cuộn bắp, giờ đây chỉ còn là một dáng người gầy gầy, teo
+      teo. Đôi mắt sâu dưới hàng lông mày rậm, hai gò má cao cao lại dần nổi lên
+      trên khuôn mặt sạm đen vì sương gió. Tuy vậy, bệnh tật không thể làm mất
+      đi tính cách bên trong của bố, bố luôn là một người đầy nghị lực, giàu tự
+      tin và hết lòng thương yêu gia đình. Gia đình tôi không khá giả, mọi chi
+      tiêu trong gia đình đều phụ thuộc vào đồng tiền bố mẹ kiếm được hàng
+      ngày”. Bài văn viết về mẹ Cũng giống như Nguyễn Thị Hậu, học sinh Nguyễn
+      Thị Kiều Vân viết về người thân trong gia đình đó là mẹ gây xúc động. Bài
+      văn được viết tháng 4/2013 trong tiết kiểm tra môn Ngữ văn khi Kiều Vân
+      học lớp 8. Bài văn được chấm điểm tối đa 10, kèm theo đó là dòng nhận xét
+      “Bài viết quá x xuất hiện thêm nhiều biến chứng. Trước đây, khi còn khỏe
+      mạnh, bao giờ bố cũng rất phong độ. Thế nhưng bây giờ, vẻ đẹp ấy dường như
+      đã dần đổi thay: Thay vì những cánh tay cuồn cuộn bắp, giờ đây chỉ còn là
+      một dáng người gầy gầy, teo teo. Đôi mắt sâu dưới hàng lông mày rậm, hai
+      gò má cao cao lại dần nổi lên trên khuôn mặt sạm đen vì sương gió. Tuy
+      vậy, bệnh tật không thể làm mất đi tính cách bên trong của bố, bố luôn là
+      một người đầy nghị lực, giàu tự tin và hết lòng thương yêu gia đình. Gia
+      đình tôi không khá giả, mọi chi tiêu trong gia đình đều phụ thuộc vào đồng
+      tiền bố mẹ kiếm được hàng ngày”. Bài văn viết về mẹ Cũng giống như Nguyễn
+      Thị Hậu, học sinh Nguyễn Thị Kiều Vân viết về người thân trong gia đình đó
+      là mẹ gây xúc động. Bài văn được viết tháng 4/2013 trong tiết kiểm tra môn
+      Ngữ văn khi Kiều Vân học lớp 8. Bài văn được chấm điểm tối đa 10, kèm theo
+      đó là dòng nhận xét “Bài viết quá x xuất hiện thêm nhiều biến chứng. Trước
+      đây, khi còn khỏe mạnh, bao giờ bố cũng rất phong độ. Thế nhưng bây giờ,
+      vẻ đẹp ấy dường như đã dần đổi thay: Thay vì những cánh tay cuồn cuộn bắp,
+      giờ đây chỉ còn là một dáng người gầy gầy, teo teo. Đôi mắt sâu dưới hàng
+      lông mày rậm, hai gò má cao cao lại dần nổi lên trên khuôn mặt sạm đen vì
+      sương gió. Tuy vậy, bệnh tật không thể làm mất đi tính cách bên trong của
+      bố, bố luôn là một người đầy nghị lực, giàu tự tin và hết lòng thương yêu
+      gia đình. Gia đình tôi không khá giả, mọi chi tiêu trong gia đình đều phụ
+      thuộc vào đồng tiền bố mẹ kiếm được hàng ngày”. Bài văn viết về mẹ Cũng
+      giống như Nguyễn Thị Hậu, học sinh Nguyễn Thị Kiều Vân viết về người thân
+      trong gia đình đó là mẹ gây xúc động. Bài văn được viết tháng 4/2013 trong
+      tiết kiểm tra môn Ngữ văn khi Kiều Vân học lớp 8. Bài văn được chấm điểm
+      tối đa 10, kèm theo đó là dòng nhận xét “Bài viết quá x
+    </p>
+  </body>
+</html>

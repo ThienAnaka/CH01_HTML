@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 5: form - biểu mẫu</title>
+</head>
+<body>
+    <!-- form: biểu mẫu, là cách để thu thập thông tin của người dùng -->
+    <!-- ko đc dùng thẻ p trong form -->
+    <!-- label hơn p ở chỗ label có attribute for="" 
+        for đi cặp vs id để tạo 1 mối liên kết 
+        name đc dùng để tạo biến-->
+    
+    <!-- Gõ thông tin vào thì thông tin sẽ đc gửi lên server thông qua query string
+        query string: đc tạo ra để truy xuất dữ liệu giúp truyền dữ liệu từ client đến server một cách hiệu quả.
+                 ko phải để nhập thông tin nhạy cảm, 
+                *nếu nhập thông tin nhạy cảm VD: mật khẩu,v.v..
+                 thì nó hiện hết lên thanh địa chỉ
+    -->
+    <form>
+        <div>
+            <label for="UserName">UserName</label>
+            <input 
+                id="UserName" 
+                type="text" 
+                placeholder="Nhập user name nhé" 
+                name="UserName"
+                />
+            
+        </div>
+
+        <div>
+            <label for="pwd">password</label>
+            <input 
+                id="pwd" 
+                type="password" 
+                placeholder="Nhập password nhé" 
+                name="password"
+                />
+        </div>
+
+        <!--Những thẻ input hay gặp  -->
+        <input type="email" />
+        <input type="number"/>
+        <input type="range"/>
+        <input type="date"/>
+        <input type="color"/>
+        <input type="file"/>
+
+        <!-- bảng chọn giới tính -->
+         <!-- ***phải có value để gửi lên server -->
+        <div>
+            <label for="male">Nam</label>
+            <input id="male" type="radio" name="Gender" value="1"/>
+            <label for="female">Nữ</label>
+            <input id="female" type="radio" name="Gender" value="2"/>
+        </div>
+
+        <!-- select -->
+        <select name="car" id="car">
+            <option value="1">BMW</option>
+            <option value="2">Audi</option>
+            <option value="3">Mec</option>
+        </select>
+        <!-- textArea -->
+        <textarea style="min-width: 200px; max-width: 200px;"></textarea>
+
+        <!-- fielset -->
+         <fieldset>
+            <legend>Hello</legend>
+            <p>Xin chào</p>
+         </fieldset>
+
+        <!-- checkbox -->
+        <div>
+            <label for="agree">Tôi đồng ý</label>
+            <input id="agree" type="checkbox" value="gay" name="isGay">
+        </div>
+        <button type="submit">Gửi</button>
+    </form>
+
+    
+
+</body>
+</html>
